@@ -30,9 +30,9 @@ def parse_whatsapp_message(payload: dict) -> list:
     return messages
 @router.get("/webhook")
 async def verify_webhook(
-        hub_mode: str = None,
-        hub_verify_token: str = None,
-        hub_challenge: str = None,
+        hub_mode: str = Query(None, alias="hub.mode"),
+        hub_verify_token: str = Query(None, alias="hub.verify_token"),
+        hub_challenge: str = Query(None, alias="hub.challenge"),
 ):
     logger.info(f"Webhook verification attempt: mode={hub_mode}, token={hub_verify_token}")
 
