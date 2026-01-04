@@ -1,9 +1,12 @@
 from fastapi import APIRouter, Request,Query, Response, status
+from fastapi.responses import PlainTextResponse
+
 
 from app.config import settings
 from app.models.whatsapp import WhatsAppWebhookPayload
 from app.services.whatsapp import WhatsAppClient
 from app.services.message_handler import MessageHandler
+
 import json
 import logging
 
