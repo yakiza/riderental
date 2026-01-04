@@ -3,7 +3,7 @@ from fastapi.responses import PlainTextResponse
 
 
 from app.config import settings
-from app.models.whatsapp import WhatsAppWebhookPayload
+from app.models.whatsapp import WhatsAppMessage
 from app.services.whatsapp import WhatsAppClient
 from app.services.message_handler import MessageHandler
 
