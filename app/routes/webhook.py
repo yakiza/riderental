@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Request, Response, status
+from fastapi import APIRouter, Request,Query, Response, status
 
 from app.config import settings
 from app.models.whatsapp import WhatsAppWebhookPayload
